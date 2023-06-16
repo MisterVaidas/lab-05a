@@ -9,8 +9,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-
+   
+    let sumResult = a + b;
+    let sumString = "The sum of " + a + " and " + b + " is " + sumResult;
+    return [sumResult, sumString];
 }
+console.log(sum(4, 7));
 
 // Here is the test for sum(); uncomment it to run it
 // testSum(4, 7);
@@ -27,11 +31,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+    let product = a * b;
+    let productString = "The product of " + a + " and " + b + " is " + product;
+    return[product, productString];
 }
+console.log(multiply(5, 9));
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
