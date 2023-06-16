@@ -11,13 +11,13 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) { //eslint-disable-line
    
     let sumResult = a + b;
-    let sumString = "The sum of " + a + " and " + b + " is " + sumResult;
+    let sumString = "The sum of " + a + " and " + b + " is " + sumResult + ".";
     return [sumResult, sumString];
 }
-console.log(sum(4, 7));
+
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+//testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -32,13 +32,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
     let product = a * b;
-    let productString = "The product of " + a + " and " + b + " is " + product;
+    let productString = "The product of " + a + " and " + b + " is " + product + ".";
     return[product, productString];
 }
 console.log(multiply(5, 9));
 
 // Here is the test for multiply(); uncomment it to run it
- testMultiply(5,9);
+// testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -55,11 +55,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+    let sumResult = sum(a, b);
+    let newSum = sum(sumResult[0], c);
+    //console.log("new sum", sumResult);
+    let product = multiply(a, b);
+    let newProduct = multiply(product[0], c);
+    let newSumString = "The sum of " + a + ", " + b + " and " + c + " is " + newSum[0] + ".";
+    let newProductString = "The product of " + a + ", " + b + " and " + c + " is " + newProduct[0] + ".";
+    return[newSum[0], newProduct[0], newSumString, newProductString];
 }
+console.log(sumAndMultiply(4, 7, 5));
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+//testSumAndMultiply();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
